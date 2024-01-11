@@ -13,4 +13,13 @@ pnpm --version
 # 更新 npm
 npm install -g npm@latest
 npm install -g npm@10.3.0
+
+# 项目初始化指令 -> 项目名称 frontend
+pnpm create vite
+# 进入前端目录
+cd frontend
+# 安装依赖
+pnpm install
+# 运行
+pnpm run dev
 ```
