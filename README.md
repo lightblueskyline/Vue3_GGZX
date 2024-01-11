@@ -41,8 +41,13 @@ pnpm run dev
 // --dev, -D 仅安装devDependencies并删除已安装的dependencies，无论 NODE_ENV是什么
 // pnpm install eslint --dev
 // pnpm i eslint -D
+
 // 生成 ESLint 配置文件
 // npx eslint --init 或者 npm init @eslint/config
-// 安装 Vue3 环境代码校验插件
+
+// 安装&配置 Vue3 环境代码校验插件
 // pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier eslint-config-prettier @babel/eslint-parser
+// 添加忽略文件 .eslintignore (dist node_modules)
+// 新增两个运行脚本 frontend\package.json
+// "scripts" 中添加 ("lint": "eslint src" & "fix": "eslint src --fix")
 ```
