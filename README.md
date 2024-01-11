@@ -23,3 +23,26 @@ pnpm install
 # 运行
 pnpm run dev
 ```
+
+## 配置运行时启动浏览器
+
+```csharp
+// frontend\package.json
+// "dev": "vite",
+// 变更为：
+// "dev": "vite --open",
+```
+
+## ESLint 配置
+
+```csharp
+// ESLint 中文官网 http://eslint.cn
+// 安装 ESLint
+// --dev, -D 仅安装devDependencies并删除已安装的dependencies，无论 NODE_ENV是什么
+// pnpm install eslint --dev
+// pnpm i eslint -D
+// 生成 ESLint 配置文件
+// npx eslint --init 或者 npm init @eslint/config
+// 安装 Vue3 环境代码校验插件
+// pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier eslint-config-prettier @babel/eslint-parser
+```
