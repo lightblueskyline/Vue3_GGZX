@@ -63,3 +63,19 @@ frontend\package.json 中的 "scripts" 中添加 ("lint": "eslint src" & "fix": 
 pnpm run lint, pnpm run fix
  */
 ```
+
+### 项目中的 prettier 格式化工具的配置
+
+```csharp
+/**
+安装依赖包：
+pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier
+
+在项目根目录创建文件：
+.prettierrc.json
+在项目根目录创建忽略文件：
+.prettierignore
+检核、修复格式：
+pnpm run lint / pnpm run fix
+ */
+```
