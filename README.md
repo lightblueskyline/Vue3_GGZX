@@ -79,3 +79,20 @@ pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier
 pnpm run lint / pnpm run fix
  */
 ```
+
+### 项目中的 Stylelint 工具的配置
+
+```csharp
+/**
+https://stylelint.bootcss.com/
+CSS 校验工具。格式化 CSS 代码，检查 CSS 语法错误与不合理的写法，指定 CSS 书写顺序...
+项目中使用 SCSS 预处理器，安装以下依赖：
+pnpm install -D sass sass-loader stylelint postcss postcss-scss postcss-html stylelint-config-prettier stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-standard stylelint-config-standard-vue stylelint-scss stylelint-order stylelint-config-standard-scss
+项目根目录创建配置文件：
+.stylelintrc.cjs
+项目根目录创建配置文件：
+.stylelintignore
+添加运行脚本：(frontend\package.json)
+-> pnpm run format
+ */
+```
