@@ -1,6 +1,8 @@
 # [尚硅谷-Vue3-硅谷甄选](https://www.youtube.com/playlist?list=PLmOn9nNkQxJECrx-JlaaJaC2gthMP7B7r)
 
-## 指令
+## [前端项目](https://gitee.com/jch1011/vue3_admin_template-bj1)
+
+### 项目的初始化
 
 ```ps
 # 查看版本
@@ -10,6 +12,7 @@ npm --version
 npm install -g pnpm
 # 查看版本
 pnpm --version
+pnpm -v
 # 更新 npm
 npm install -g npm@latest
 npm install -g npm@10.3.0
@@ -24,30 +27,39 @@ pnpm install
 pnpm run dev
 ```
 
-## 配置运行时启动浏览器
+[Volar extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+### 项目中的 ESLint 代码校验工具的配置
 
 ```csharp
-// frontend\package.json
-// "dev": "vite",
-// 变更为：
-// "dev": "vite --open",
-```
+/**
+配置运行时启动浏览器
+frontend\package.json 中的 "scripts"
+"dev": "vite",
+变更为：
+"dev": "vite --open",
+ */
 
-## ESLint 配置
+/**
+ESLint 中文官网 http://eslint.cn
+安装 ESLint
+--dev, -D 仅安装devDependencies并删除已安装的dependencies，无论 NODE_ENV是什么
+pnpm install eslint --dev
+-> pnpm i eslint -D
 
-```csharp
-// ESLint 中文官网 http://eslint.cn
-// 安装 ESLint
-// --dev, -D 仅安装devDependencies并删除已安装的dependencies，无论 NODE_ENV是什么
-// pnpm install eslint --dev
-// pnpm i eslint -D
+生成 ESLint 配置文件：
+npx eslint --init 或者 npm init @eslint/config
 
-// 生成 ESLint 配置文件
-// npx eslint --init 或者 npm init @eslint/config
+安装 & 配置 Vue3 环境代码校验插件：
+pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier eslint-config-prettier @babel/eslint-parser
 
-// 安装&配置 Vue3 环境代码校验插件
-// pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier eslint-config-prettier @babel/eslint-parser
-// 添加忽略文件 .eslintignore (dist node_modules)
-// 新增两个运行脚本 frontend\package.json
-// "scripts" 中添加 ("lint": "eslint src" & "fix": "eslint src --fix")
+添加 ESLint 忽略，并且指定忽略文件夹
+frontend\.eslintignore
+文件夹名称：dist, node_modules
+
+添加运行脚本：
+frontend\package.json 中的 "scripts" 中添加 ("lint": "eslint src" & "fix": "eslint src --fix")
+之后可以运行脚本校验、修复：
+pnpm run lint, pnpm run fix
+ */
 ```
