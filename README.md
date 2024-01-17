@@ -96,3 +96,16 @@ pnpm install -D sass sass-loader stylelint postcss postcss-scss postcss-html sty
 -> pnpm run format
  */
 ```
+
+### 项目中的 Husky 工具的配置
+
+```csharp
+/**
+强制格式化、检查代码，提交之前出发 Git 管控
+安装 Husky
+pnpm install -D husky
+执行：
+npx husky-init
+frontend\.husky\pre-commit
+ */
+```
