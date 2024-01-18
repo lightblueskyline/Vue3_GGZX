@@ -149,3 +149,25 @@ pnpm install element-plus @element-plus/icons-vue
 -> frontend\tsconfig.json
  */
 ```
+
+### src 文件夹别名配置
+
+```csharp
+/**
+-> frontend\vite.config.ts
+import path from 'path'
+resolve: {
+  alias: {
+    "@": path.resolve("./src")
+  }
+}
+-> frontend\tsconfig.json "compilerOptions"
+"baseUrl": "./",
+"paths": {
+  "@/*": [
+    "src/*"
+  ]
+}
+-> import App from '@/App.vue'
+ */
+```
