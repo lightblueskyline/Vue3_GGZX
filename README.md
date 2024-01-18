@@ -109,3 +109,16 @@ npx husky-init
 frontend\.husky\pre-commit
  */
 ```
+
+### 项目中的 CommitLint 工具的配置
+
+```csharp
+/**
+pnpm install -D @commitlint/config-conventional @commitlint/cli
+添加配置文件 commitlint.config.cjs
+frontend\package.json 中的 "scripts" 添加
+"commitlint": "commitlint --config commitlint.config.cjs -e -V"
+配置 Husky
+npx husky add .husky/commit-msg
+ */
+```
