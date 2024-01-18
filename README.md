@@ -139,3 +139,13 @@ frontend\package.json 中的 "scripts" 添加
 "preinstall": "node ./scripts/preinstall.js"
  */
 ```
+
+### 项目集成 Element-Plus
+
+```csharp
+/**
+pnpm install element-plus @element-plus/icons-vue
+-> frontend\src\main.ts 完整引入 (// @ts-ignore)
+-> frontend\tsconfig.json
+ */
+```
