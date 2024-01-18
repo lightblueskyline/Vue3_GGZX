@@ -122,3 +122,20 @@ frontend\package.json 中的 "scripts" 添加
 npx husky add .husky/commit-msg
  */
 ```
+
+### 强制使用 pnpm 包管理器工具
+
+```csharp
+/**
+根目录创建 scripts/preinstall.js 并加入以下内容
+if (!/pnpm/.test(process.env.npm_execpath || '')) {
+    console.warn(
+        `\u001b[33mThis repository must using pnpm as the package manager ` +
+        ` for scripts to work properly.\u001b[39m\n`,
+    )
+    process.exit(1)
+}
+frontend\package.json 中的 "scripts" 添加
+"preinstall": "node ./scripts/preinstall.js"
+ */
+```
