@@ -171,3 +171,20 @@ resolve: {
 -> import App from '@/App.vue'
  */
 ```
+
+### 环境变量的配置
+
+```csharp
+/**
+项目根目录创建配置文件：
+.env.development
+.env.production
+.env.test
+配置运行命令：(frontend\package.json "scripts")
+-> "dev": "vite --open"
+-> "build:test": "vue-tsc && vite build --mode test"
+-> "build:pro": "vue-tsc && vite build --mode production"
+// 获取环境变量
+console.log(import.meta.env)
+ */
+```

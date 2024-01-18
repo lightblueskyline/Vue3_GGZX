@@ -16,5 +16,7 @@ const app = createApp(App)
 app.use(ElementPlus, {
     locale: zhCn,
 })
+// 获取环境变量
+console.log(import.meta.env)
 // 挂载应用
 app.mount('#app')
